@@ -42,7 +42,7 @@
       </div>
       <div class="bg">
         <div class="content">
-          <div class="header">
+          <header class="header">
             <div class="header__logo"><img src="img/logo.png" alt="" /></div>
 
             <ul class="nav">
@@ -53,7 +53,7 @@
               <ui class="nav__item"><a href="#">Обзоры</a></ui>
               <ui class="nav__item"><a href="#">Контакты</a></ui>
             </ul>
-          </div>
+          </header>
 
           <div class="gamesSchedule">
             <div class="title">МАТЧИ</div>
@@ -121,9 +121,9 @@
               <div class="title">НОВОСТИ</div>
               <div class="news__wrapper">
                 <div class="blockInfo news__blockInfo">
-                  <span class="news__title"
-                    ><a href="#">Кубок Открытия наш!!!</a></span
-                  >
+                  <div class="news__title">
+                    <a href="#">Кубок Открытия наш!!!</a>
+                  </div>
                   <div class="news__body">
                     <img class="news__foto" src="img/fotonews.jpg" alt="" />
                   </div>
@@ -134,8 +134,10 @@
                     </div>
                   </div>
                 </div>
-                <div class="news__allNews mainButton">
-                  Смотреть все новости →
+                <div class="news__allNews">
+                  <div class="button button_primery">
+                    <a href="#">Все новости →</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -145,8 +147,10 @@
               <div class="newGame__wrapper">
                 <div class="blockInfo newGame__blockInfo"></div>
 
-                <div class="newGame__allGames mainButton">
-                  Календарь игр команды Старт →
+                <div class="newGame__allGames">
+                  <div class="button button_primery">
+                    <a href="#">Календарь игр команды Старт →</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -160,6 +164,7 @@
             <div class="blockInfo leaders__blockInfo"></div>
             <div class="blockInfo leaders__blockInfo"></div>
           </div>
+
           <div class="blockWrapper">
             <div class="achievements">
               <div class="title">ДОСТИЖЕНИЯ</div>
@@ -168,18 +173,39 @@
                 <div class="blockInfo achievements__blockInfo"></div>
                 <div class="blockInfo achievements__blockInfo"></div>
                 <div class="blockInfo achievements__blockInfo"></div>
+                <div class="achievements__more">
+                  <div class="button button_primery">
+                    <a href="#">Смотреть больше →</a>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="standings">
               <div class="title">ТАБЛИЦА</div>
               <div class="standings__wrapper">
                 <div class="blockInfo standings__blockInfo"></div>
+                <div class="standings__more">
+                  <div class="button button_primery">
+                    <a href="#">Все соревнования →</a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="footer"></div>
+      <footer class="footer">
+        <div class="footer__text">
+          © 2020 г. ЛХК "Старт" г. Энгельс Саратовская область
+        </div>
+        <div class="footer__icons">
+          <a href="#"
+            ><img class="footer__iconsOk" src="img/ok2.svg" alt=""
+          /></a>
+          <a href="#"><img src="img/vk1.svg" alt="" /></a>
+          <a href="#"><img src="img/mail2.svg" alt="" /></a>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
