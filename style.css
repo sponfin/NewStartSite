@@ -76,7 +76,7 @@ a {
 .nav__item {
   text-align: center;
   vertical-align: middle;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   border-radius: 5px;
   margin: 1.1rem;
 }
@@ -117,14 +117,14 @@ a {
   width: 14rem;
   background: #ffffff;
   border: 3px solid #184073;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   border-radius: 5px;
   text-align: center;
   word-break: break-all;
   padding: 2px;
 }
 
-.gamaeItem__gamesSchedule {
+.gameItem__gamesSchedule {
   margin-top: 2rem;
   margin-bottom: 0.5rem;
 }
@@ -178,28 +178,28 @@ a {
 .blockInfo {
   background: #d8e5f8;
   border: 1px solid #98b4d8;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   border-radius: 5px;
 }
 .blockWrapper {
   display: flex;
+  overflow: hidden;
 }
 
 .newsBlock {
-  flex: 60%;
 }
 
 .news__wrapper {
-  padding: 1rem 3rem;
+  padding: 1rem 0 1rem 3rem;
   text-align: center;
 }
 
 .news__blockInfo {
-  /* height: 411px; */
+  height: 411px;
+  width: 637px;
 }
 
 .newGame {
-  flex: 40%;
 }
 .news__title {
   font-family: Roboto;
@@ -216,27 +216,27 @@ a {
 }
 
 .news__body {
-  border: 2px solid #184073;
-  box-sizing: border-box;
-  border-radius: 5px;
-  margin: 0px 1.5rem;
-  width: 622px;
-  height: 334px;
+  display: flex;
+  justify-content: center;
+  /* box-sizing: border-box; */
+
   z-index: 2;
 }
 
 .news__foto {
-  box-sizing: border-box;
+  border: 2px solid #184073;
+  border-radius: 5px;
+  /* box-sizing: border-box; */
   z-index: 1;
   object-fit: cover;
-  width: 100%;
-  height: 100%;
-  /* max-height: 100%;
-  height: auto; */
+  width: 559px;
+  height: 327px;
 }
 
 .news__footer {
-  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  padding-top: 5px;
+  padding-left: 35px;
+  padding-right: 35px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -282,12 +282,68 @@ a {
 }
 
 .newGame__wrapper {
-  padding: 1rem 3rem;
+  padding: 1rem 3rem 1rem 2rem;
   text-align: center;
 }
 
 .newGame__blockInfo {
   height: 411px;
+  width: 435px;
+}
+
+.newGame__title {
+  font-family: Roboto;
+  font-size: 1.1rem;
+  color: #011938;
+  font-weight: bold;
+  padding: 0.5rem 5rem;
+}
+
+.newGame__wrapperTeams {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1.5rem;
+}
+.newGame__teamHome {
+  font-family: Roboto;
+  color: #14345e;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.newGame__teamSplit {
+  font-family: Montserrat;
+  font-weight: bold;
+  color: #14345e;
+  font-size: 3rem;
+}
+.newGame__teamGuest {
+  font-family: Roboto;
+  color: #14345e;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.newGame__locationGame {
+  font-family: Roboto;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #c10000;
+  padding-top: 0.5rem;
+}
+.newGame__timeGame {
+  font-family: Roboto;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #c10000;
+  padding-top: 0.5rem;
+}
+.newGame__dateGame {
+  font-family: Montserrat;
+  font-weight: bold;
+  color: #c10000;
+  font-size: 2rem;
 }
 
 .newGame__allGames {
@@ -300,35 +356,110 @@ a {
 .leaders {
   display: flex;
   justify-content: space-between;
-  padding: 1.1rem 3rem;
+  padding: 1rem 3rem;
 }
-.leaders__blockInfo {
+
+.leadersCard {
   width: 206px;
   height: 363px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.leadersCard__category {
+  font-family: Roboto;
+  color: #14345e;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-top: 0.5rem;
+}
+.leadersCard__plaeyer {
+  position: relative;
+  height: 231px;
+  width: 160px;
+  padding-top: 0.5rem;
+}
+.leadersCard__plaeyerNumber {
+  position: absolute;
+  font-family: Roboto;
+  color: #14345e;
+  font-size: 1rem;
+  font-weight: 700;
+  height: 31px;
+  width: 31px;
+  right: 2px;
+  top: 15px;
+}
+
+.leadersCard__plaeyerFoto {
+  object-fit: cover;
+  object-position: 50% 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.leadersCard__plaeyerName {
+  font-family: Roboto;
+  color: #14345e;
+  font-size: 1rem;
+  font-weight: 700;
+  padding-top: 0.5rem;
+}
+.leadersCard__gamesCount {
+  font-family: Roboto;
+  color: #14345e;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.leadersCard__points {
+  font-family: Roboto;
+  color: #14345e;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .achievements {
-  flex: 60%;
 }
-
 .standings {
-  flex: 40%;
+  flex-grow: 1;
 }
 
 .achievements__wrapper {
-  padding: 1.1rem 3rem 1.1rem 3rem;
+  padding: 1rem 0 1rem 3rem;
 }
 
-.standings__wrapper {
-  padding: 1.1rem 3rem 1.1rem 0rem;
-}
-
-.achievements__blockInfo {
+.achievement {
+  display: flex;
   width: 525px;
   height: 165px;
-  margin-top: 21px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
-.achievements__blockInfo:first-child {
+
+.achievements__achievement {
+  margin-top: 20px;
+}
+.achievement__titleAndPlaceWrapper {
+  flex: 1 1 70%;
+}
+.achievement__icon {
+}
+.achievement__title {
+  color: #14345e;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: Roboto;
+}
+.achievement__place {
+  margin-top: 10px;
+  font-family: Roboto;
+  color: #184073;
+  font-weight: 500;
+}
+
+.achievements__achievement:first-child {
   margin-top: 0px;
 }
 
@@ -339,9 +470,57 @@ a {
   padding-top: 1rem;
 }
 
-.standings__blockInfo {
+.standings__wrapper {
+  padding: 1rem 3rem 1rem 3rem;
+}
+.tournamentTable {
   width: 537px;
-  height: 727px;
+  height: 100%;
+}
+
+.tournamentTable__table {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+}
+.tournamentTable__title {
+  font-family: Roboto;
+  color: #14345e;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 10px;
+}
+
+td {
+  margin: 10px;
+}
+
+.tournamentTable__header {
+  font-family: Roboto;
+  color: #184073;
+  font-weight: 500;
+  border-bottom: 1px solid #9fb9dc;
+  border-top: 1px solid #9fb9dc;
+}
+
+.tournamentTable__row {
+  font-family: Roboto;
+  color: #14345e;
+  font-weight: 400;
+}
+.tournamentTable__columnNumber {
+  width: 40px;
+  padding-left: 15px;
+}
+.tournamentTable__columnTeam {
+  padding-left: 15px;
+}
+.tournamentTable__columnCountGame {
+  width: 40px;
+}
+.tournamentTable__columnPoints {
+  width: 40px;
 }
 
 .standings__more {
